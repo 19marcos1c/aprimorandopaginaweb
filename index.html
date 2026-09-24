@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style>
+     header {
+          background-color: #1F4369;
+          color: #FFFFFF; 
+          text-align: center;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 16px;
+     }
+     main {
+          background-color: #FFFFFF;    
+          color: #1F4369;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 16px;
+     }
+     article {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+     }
+     
+     img {
+        width: 80px;
+        height: 80px;
+     }
+     .artigo-autor {
+        font-weight: bold;
+     }
+    </style>
+</head>
+<body>
+   <header>
+       <h1>Meu blog tech</h1>
+       <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+   </header>
+
+   <main>
+     <article>
+        <img src="Dicas-Essenciais-para-uma-Integracao-Tecnologica-Eficaz.png" alt="Imagem de tecnologia de um humano dando a mão para um robo">
+        <div>
+           <h2>Meu primeiro post</h2>
+           <p class="artigo-autor">Por: Marcos Vinicios</p>
+           <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+           <button>❤️ <span>0</span></button>
+           <button>👍🏻 <span>0</span></button>
+        </div>
+     </article>
+
+     <article>
+        <img src="Dicas-Essenciais-para-uma-Integracao-Tecnologica-Eficaz.png" alt="Imagem de tecnologia de um humano dando a mão para um robo">
+        <div>
+           <h2>Meu segundo post</h2>
+           <p class="artigo-autor">Por: Marcos Vinicios</p>
+           <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+           <button>❤️ <span>0</span></button>
+           <button>👍🏻 <span>0</span></button>
+        </div>
+     </article>
+   </main>
+
+   <script> 
+     const botoes = document.querySelectorAll("button");
+
+     botoes.forEach(function(botao) {
+       // Controla se ESTE botão específico já foi clicado
+       let curtiu = false;
+
+       botao.addEventListener("click", function() {
+         let texto = botao.querySelector("span");
+
+         if (curtiu === false) {
+           texto.textContent++;
+           curtiu = true;
+         } else {
+           texto.textContent--;
+           curtiu = false;
+         }
+       });
+     });
+   </script>
+</body>
+</html>
