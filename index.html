@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog</title>
+    <!-- Se for usar um arquivo externo de CSS, feche a tag link: -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Para colocar regras de CSS no próprio HTML, use a tag <style>: -->
     <style>
      header {
           background-color: #1F4369;
@@ -36,6 +40,7 @@
      }
     </style>
 </head>
+
 <body>
    <header>
        <h1>Meu blog tech</h1>
@@ -66,25 +71,6 @@
      </article>
    </main>
 
-   <script> 
-     const botoes = document.querySelectorAll("button");
-
-     botoes.forEach(function(botao) {
-       // Controla se ESTE botão específico já foi clicado
-       let curtiu = false;
-
-       botao.addEventListener("click", function() {
-         let texto = botao.querySelector("span");
-
-         if (curtiu === false) {
-           texto.textContent++;
-           curtiu = true;
-         } else {
-           texto.textContent--;
-           curtiu = false;
-         }
-       });
-     });
-   </script>
+  <script src="script.js"></script>
 </body>
 </html>
